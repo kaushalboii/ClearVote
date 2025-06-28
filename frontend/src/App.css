@@ -1,34 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .App {
   text-align: center;
-  padding: 20px;
-  font-family: sans-serif;
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #e1f5fe);
+  min-height: 100vh;
 }
 
 textarea {
   font-size: 1rem;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 12px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 600px;
+  border: 2px solid #0077ff;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+textarea:focus {
+  border-color: #005bb5;
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.3);
 }
 
 button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #0077ff;
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #0077ff, #00c6ff);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #005bb5, #00aaff);
+  transform: translateY(-2px);
 }
 
 .summary-box {
-  margin-top: 30px;
+  margin-top: 40px;
   text-align: left;
-  width: 60%;
+  width: 80%;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.summary-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
