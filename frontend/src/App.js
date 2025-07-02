@@ -1,9 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
   const [proposalText, setProposalText] = useState("");
   const [summary, setSummary] = useState("");
+  const [theme, setTheme] = useState("light");
+
+useEffect(() => {
+  document.body.className = theme;
+}, [theme]);
+
+const toggleTheme = () => {
+  setTheme(theme === "light" ? "dark" : "light");
+};
+<button className="theme-toggle" onClick={toggleTheme}>
+  {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+</button>
 
   const handleSummarize = async () => {
     setSummary("⏳ Summarizing...");
